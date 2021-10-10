@@ -68,8 +68,8 @@ class Card
             //console.log ("checked");
             this.matchedCards.push(card);
             this.matchedCards.push(this.cardToCheck);
-            card.classList.add("revealed");
-            this.cardToCheck.classList.add("revealed");
+            //card.classList.add("revealed");
+            //this.cardToCheck.classList.add("revealed");
             if (this.matchedCards.length == 16)
             {
                 this.overlayOn ();
@@ -97,7 +97,8 @@ class Card
      */
     removeFlipped ()
     {
-        this.arr.forEach (card => {card.classList.remove("visible"); card.classList.remove("revealed");})
+        //card.classList.remove("revealed");
+        this.arr.forEach (card => {card.classList.remove("visible");})
     }
 
     /*
