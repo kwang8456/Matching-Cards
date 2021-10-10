@@ -1,0 +1,189 @@
+<!-- Kevin Wang, Section 83 Even 5/6, 9/30/2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Match Game </title>
+    
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <script src = "script.js" async> </script>
+</head>
+
+<body>
+    <h1> Match Game </h1>
+
+    <hr/>
+
+    <div id = "overlay" class = "comment">
+        <div id = "beginning" class = "paragraph">
+            <p>
+                The game mechanics are simple. Click on an image to reveal it. 
+                It will stay revealed until you click on a second image. 
+                If both images match, they will stay revealed. If they don’t, 
+                they will both change back into the hidden icon. 
+                Once all of the images have been revealed the game ends. 
+                The score is determined by the number of clicks. 
+                Each time you click on one of the images, you score
+                will increment by 1, where the lowest possible score is 16 if you 
+                already know where all of the images are or you are insanely lucky). 
+                When the reset button is clicked, all of the images will return 
+                to the hidden icon and the score will be reset to 0.
+            </p>
+            <button class = "custom" onclick = "start ();"> Start Game </button>
+        </div>
+        <div id = "overlay1" class = "comment16">
+            <p> Great Job! You must be one lucky fellow! </p>
+            <button class = "custom" onclick = "start ();"> Restart Game </button>
+        </div>
+
+        <div id = "overlay2" class = "comment17-35">
+            <p> Keep trying! </p>
+            <button class = "custom" onclick = "start ();"> Restart Game </button>
+        </div>
+
+        <div id = "overlay3" class = "comment36">
+            <p> Welp, you must be one unlucky fellow </p>
+            <button class = "custom" onclick = "start ();"> Restart Game </button>
+        </div>
+    </div>
+
+    <div class = "box">
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/pikachu.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/pikachu.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/vulpix-alolan.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/vulpix-alolan.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/gengar.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/gengar.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/snorlax.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/snorlax.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/umbreon.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/umbreon.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/dragonair.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/dragonair.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/espeon.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/espeon.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/mew.jpg">
+            </div>
+        </div>
+        <div class = "card"> 
+            <div class = "card-back deck">
+                <img class = "back" src = "images/Back.png">
+            </div>
+            <div class = "card-front deck">
+                <img class = "front" src = "images/mew.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2> Count: <span id = "numCount"> </span> </h2>
+        <button onclick = "start ();"> Restart </button>
+    </div>
+</body>
+</html>
